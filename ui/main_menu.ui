@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainMenu</class>
+ <widget class="QMainWindow" name="MainMenu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>360</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>480</width>
+    <height>360</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../pics/hops_icon.PNG</normaloff>../pics/hops_icon.PNG</iconset>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>24</width>
+    <height>24</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="btn_Bus">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>140</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Calibri</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="statusTip">
+     <string>Run dynamic stability check for bus</string>
+    </property>
+    <property name="text">
+     <string>Bus</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_Copyright">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>315</y>
+      <width>110</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>© HOPS d.o.o. 2020</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_Branch">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>140</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Calibri</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="statusTip">
+     <string>Run dynamic stability check for branch</string>
+    </property>
+    <property name="text">
+     <string>Branch</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_Machine">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>160</y>
+      <width>140</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Calibri</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="statusTip">
+     <string>Run dynamic stability check for machine</string>
+    </property>
+    <property name="text">
+     <string>Machine</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_Options">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>230</y>
+      <width>140</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Calibri</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="statusTip">
+     <string>Set default files for import</string>
+    </property>
+    <property name="text">
+     <string>Options</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_Description">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>20</y>
+      <width>211</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit nisi iaculis, rutrum lectus ac, vestibulum quam. Vivamus porta facilisis mauris, sed tempus velit gravida eu. Nulla semper, sem sed pharetra malesuada, augue est ultricies enim, ac tristique magna ex sed ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin ante lectus, id faucibus libero condimentum vitae. Nulla pretium est in ex consectetur, pharetra varius ligula consectetur. Aenean fermentum accumsan ultrices. In vestibulum mollis iaculis. Mauris imperdiet egestas leo. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim odio risus, ut placerat nulla maximus egestas. Phasellus cursus, nibh non sagittis laoreet, felis ex fermentum massa, et suscipit velit nisl eget justo. </string>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>480</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
