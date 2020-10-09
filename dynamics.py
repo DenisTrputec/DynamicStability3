@@ -1,4 +1,5 @@
 import sys
+import psse
 from PyQt5.QtWidgets import QApplication, QFileDialog, QMainWindow
 from PyQt5 import uic, QtCore
 from configparser import ConfigParser
@@ -38,6 +39,9 @@ class MainMenu(baseMainMenu, formMainMenu):
         self.raw_file = (config["path"]["raw"].split('/'))[-1]
         self.dyr_file = (config["path"]["dyr"].split('/'))[-1]
 
+        psse.initialize()
+        psse.read_files(config["path"]["raw"], config["path"]["dyr"])
+
         self.btn_Bus.clicked.connect(lambda: self.newWindow(Bus, "bus"))
         self.btn_Branch.clicked.connect(lambda: self.newWindow(Branch, "branch"))
         self.btn_Machine.clicked.connect(lambda: self.newWindow(Machine, "machine"))
@@ -49,6 +53,7 @@ class MainMenu(baseMainMenu, formMainMenu):
         if key != "import":
             self.child_window[key].action_Bus.triggered.connect(lambda: self.openInfo(BusInfo, "bus_info"))
             self.child_window[key].action_ShowGrid.triggered.connect(lambda: self.image.show())
+            # self.child_window[key].btn_Initialize.clicked.connect(self.child_window[key].initialize)
             self.refreshText(key)
 
     def openInfo(self, cls, key):
@@ -80,7 +85,7 @@ class Import(baseImport, formImport):
         sender = self.sender()
         if sender.objectName() == 'btn_BrowsePfData':
             file_path = QFileDialog.getOpenFileName(self, caption='Browse Power Flow Data File', directory='',
-                                                    filter='*.raw')
+                                                    filter='*.raw; *.rawx; *.sav')
             self.line_PowerFlowData.setText(file_path[0])
         else:
             file_path = QFileDialog.getOpenFileName(self, caption='Browse Dynamics Data File', directory='',
